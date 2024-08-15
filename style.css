@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: var(--f-family);
+
+}
+
+:root{
+--Green-200: hsl(148, 38%, 91%); /* (lighter) */
+--Green-600: hsl(169, 82%, 27%);/* (medium) */
+--Red: hsl(0, 66%, 54%);
+
+
+--White: hsl(0, 0%, 100%);
+--Grey-500: hsl(186, 15%, 59%); /* (medium) */
+--Grey-900: hsl(187, 24%, 22%); /*(darker) */
+
+--Font-size: 16px; /* labels */
+--f-family:"Karla", sans-serif;
+}
+
+
+
+body {
+    background-color: var(--Green-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+main {
+    width: 35%;
+    background-color: var(--White);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    min-width: 537px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-wrapper {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-container{
+    display: flex;
+    gap: 1rem;
+}
+.query-container {
+    flex-direction: column !important;
+}
+
+.contact-card-container {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.contact-card-container > .contact-card >  label {
+    font-size: 1rem !important;
+
+}
+
+.contact-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    /* background-color: yellow; */
+}
+
+input,textarea,.btn {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--Grey-500);
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--Green-600);
+    color: var(--White);
+}
+.contact-card-container > .contact-card {
+    flex-direction: row;
+    border: 1px solid var(--Grey-500);
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    position: relative;
+    height: 32.8px;
+
+}
+.contact-card-container> .contact-card > input  {
+    width: 20px;
+    accent-color: var(--Green-600);
+}
+.contact-card-container> .contact-card > label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    content: "";
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: .5rem;
+    cursor: pointer;
+    font-size: .9rem !important;
+}
+
+.contact-card-container> .contact-card > input, input[type="checkbox"]{
+    box-shadow: none !important;
+}
+
+input:hover{
+    border-color: var(--Green-600);
+}
+input:focus,textarea:focus {
+    box-shadow:  0px 0px 2px 1px var(--Green-600);
+}
+
+.contact-card-container > .contact-card:focus-within {
+    box-shadow:  0px 0px 2px 1px var(--Green-600);
+}
+.contact-card-container > .contact-card:hover{
+    border-color: var(--Green-600);
+}
+
+
+textarea {
+    line-height: 2rem;
+}
+
+
+
+h1 {
+    font-size: 1.7rem;
+    color: var(--Grey-900);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    color: var(--Grey-900);
+    font-size: .8rem;
+}
+
+.check-card {
+    flex-direction: row;
+    align-items: center;
+}
+.check-card input {
+    width: max-content;
+
+    accent-color: var(--Green-600);
+}
+
+.check-card input:focus {
+    background-color: red;
+}
+
+
+  
+.check-card p {
+    font-size: .9rem;
+}
+
+input[type="button"] {
+    background-color: var(--Green-600);
+    color: var(--White);
+    padding: .7rem;
+}
+
+input[type="button"]:hover {
+    background-color:hsl(169, 50%, 27%);
+}
+
+.selecteddiv{
+    background-color: var(--Green-200) !important;
+}
+.selectedlabel {
+    color: var(--White);
+}
+.selectedradio {
+    accent-color: var(--White) !important;
+}
+
+.error-message {
+    background-color: var(--Red);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.error-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.succes-div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Green-600);
+    transform: translate(-100%,0px);
+    transition: all .3s ease;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+.succes-div img {
+    width: 100px;
+}
+.succes-div h4 {
+    font-size: 2rem;
+    color: var(--White);
+}
+.succes-div p {
+    color: var(--White);
+}
+
+.succes-div-active {
+    transform: translate(0px,0px);
+
+}
+@media screen and (max-width:600px) {
+
+    main {
+        width: 95%;
+        min-width: 290px;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-card-container {
+        flex-direction: column;
+    }
+}

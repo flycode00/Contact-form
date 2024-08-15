@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main>
+      <div class="succes-div">
+        <img src="./assets/images/icon-success-check.svg" alt="check-icon" />
+        <h4>Message Sent !</h4>
+        <p>Thanks for completing the form. We'll be in touch soon !</p>
+      </div>
+      <h1>Contact Us</h1>
+      <form class="contact-wrapper">
+        <div class="contact-container">
+          <div class="contact-card">
+            <label for="#">First Name *</label>
+            <input type="text" class="firstname" />
+          </div>
+          <div class="contact-card">
+            <label for="#">Last Name *</label>
+            <input type="text" class="lastname" />
+          </div>
+        </div>
+        <div class="contact-container">
+          <div class="contact-card">
+            <label>Email Adress *</label>
+            <input type="email" class="email" id="emailInput" />
+          </div>
+        </div>
+        <div class="contact-container query-container">
+          <label for="#">Query Type *</label>
+          <div class="contact-card-container">
+            <div class="contact-card radiodiv">
+              <input
+                type="radio"
+                id="javascript"
+                name="fav_language"
+                value="JavaScript"
+                class="radioinput"
+              />
+                <label for="javascript" class="radiolabel">JavaScript</label>
+            </div>
+            <div class="contact-card radiodiv">
+              <input
+                type="radio"
+                id="html"
+                name="fav_language"
+                value="HTML"
+                class="radioinput"
+              />
+              <label for="html" class="radiolabel">HTML</label>
+            </div>
+          </div>
+        </div>
+        <div class="contact-container">
+          <div class="contact-card">
+            <label for="#">Message * </label>
+            <textarea
+              maxlength="100"
+              class="message"
+              style="resize: none"
+            ></textarea>
+          </div>
+        </div>
+        <div class="contact-container">
+          <div class="contact-card check-card">
+            <input type="checkbox" class="check" />
+            <p>I consent to being contacted by the team *</p>
+          </div>
+        </div>
+        <button class="btn">Submit</button>
+
+        <p class="error-message"></p>
+      </form>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
